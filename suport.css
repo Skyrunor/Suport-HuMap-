@@ -1,0 +1,81 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+header {
+    background-color: #007BFF;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    position: relative;
+}
+
+header h1{
+    font-size: 24px;
+}
+
+.hamburger{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+.contacts {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.contact {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+.contact h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.contact a.phone {
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2px;
+}
+.contact a.email {
+    color: black;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 2px;
+}  
+@media (max-width: 900px) {
+      .contacts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}   
+@media (max-width: 500px) {
+      .contacts {
+        grid-template-columns: 1fr;
+    }
+}
