@@ -9,13 +9,11 @@
 <body>
 <div class="topbar">
   <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <h1>Titulo</h1>
 </div>
-
-
 <div id="sidebar" class="sidebar">
-     <button class="menu-btn-inside" onclick="toggleSidebar()">☰</button>
+    <button class="menu-btn-inside" onclick="toggleSidebar()">☰</button>
   <div class="sidebar-content">
-
     <a href="#"><span class="icon">💬</span>Feed</a>
     <a href="#"><span class="icon">👤</span>Perfil</a>
     <a href="#"><span class="icon">⚙️</span>Configurações</a>
@@ -23,16 +21,13 @@
     <a href="#"><span class="icon">👥</span>Sobre nós</a>
     <a href="#"><span class="icon">📄</span>Tutorial</a>
   </div>
-
   <button class="exit-btn">
     <span class="icon">⤿</span>Sair
   </button>
 </div>
 <div class="main">
   <h1>Ola Mundo!</h1>
- 
 </div>
-
 <script>
   function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");

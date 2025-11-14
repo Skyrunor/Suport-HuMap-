@@ -1,52 +1,65 @@
 *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+/*Galera, uma molecula de DNA é pequena ou grande?*/
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
 }
-header{
-    font-size: 20px;
-    background-color: #007BFF;
-    position:absolute;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    position: relative;
+/*Cabeçalho. Ela não é pequena nem grande...*/
+header {
+        background-color: #007BFF;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        color: white;
+        font-family: Arial, sans-serif;
 }
-header h1{
-    font-size: 24px;
+.header h1{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 1px;
+    text-align: center;
 }
-.hamburger{
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+/*Icone do menu e etc*/
+.menu-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
 }
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
+.menu-icon span {
+        width: 22px;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
 }
+.title {
+        font-size: 22px;
+        font-weight: bold;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+}
+.icon {
+        width: 40px;
+        height: auto;
+        filter: invert(1);
+}
+/*===do HuMap===*/
 .imagem{
-   display:flex;
-   flex-direction: column;
-   left: 60px;
-   width: 25%;
-   height: 0%;
+    display:flex;
+    flex-direction: column;
+    left: 60px;
+    width: 25%;
+    height: 0%;
 }
-.imaginex{
-    position-try-order: initial;
-    background-position: cover;
-
-}
+/*Números e Contatos*/
 .contacts {
     margin-top: 40px;
     display: grid;
@@ -74,17 +87,61 @@ header h1{
     display: block;
     margin-bottom: 2px;
 }
+/*Botão Flutuante HAHA SKYRUNOR RULES!*/
 .floatingBtn{
-    bottom: 15px;
-    left: 15px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
     background-color: #007BFF;
+    color: white;
+    display: flex;
     border-radius: 999px;
-    padding: 12px 22px;
-    box-shadow: 0.3px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s ease;
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
 }
 .floatingBtn:hover{
-    background:none;
+    background-color: rgb(0, 105, 220);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    padding: 12px 16px;
+    transition: 0.3s;
+}
+.menu-btn:hover {
+    background-color: #0062cc;
+}
+.container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        width: fit-content;
+    }
+.lado-esquerdo {
+        width: 80px;
+        height: auto;
+        object-fit: contain;
+}
+.texto p {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.3em;
 }
 @media (max-width: 900px){
       .contacts{
