@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Suporte PROCON</title>
-<link rel="stylesheet" href="./suport.css">
+<link rel="stylesheet" href="./jojo.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
     
     /*tabela com as informações*/
@@ -29,91 +30,93 @@
     tr:nth-child(even) {
         background: #f3f7fc;
     }
-    /* links normais */
+
+    /* links */
     a {
         color: #0053a6;
         font-weight: bold;
         text-decoration: none;
     }
-    /* cor quando o usuário já clicou */
-    a:visited {
-        color: #7a0099;
-    }
-    /* hover */
-    a:hover {
-        text-decoration: underline;
-    }
-    /*Imagens do canto inferior esquerdo*/
+    a:visited { color: #7a0099; }
+    a:hover { text-decoration: underline; }
+
+
+    /* BOTÕES FIXOS DO CANTO DIREITO */
     .hamburger {
         position: fixed;
-        background-size: 30px 30px;
-        grid-template-columns: auto auto;
         bottom: 20px;
         right: 20px;
         display: flex;
         flex-grow: left;
-        gap: 100px;
-        justify-content: flex-end;
-        margin-top: 500px;
-        z-index: 50;
+        grid-template-columns: auto auto;
+        gap: 15px;
+        z-index: 999;
     }
+
     .btn-img {
-        border-style: hidden;
-        position: relative;
-        width: 80px;
-        width: fit-content;
-        height: 80px;
-        margin: 16px;
-        cursor: pointer;
         display: flex;
-        justify-content: center;
         align-items: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .btn-img:hover {
-        transform: translateY(-4px) scale(1.03);
-        box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-    }
-    .btn-img img {
-        border-radius: 999px;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .msg {
-        font-family:'Montserrat',sans-serif;
-        display: grid;
-        flex-grow: 100px;
-        position: absolute;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-        background-image: rgba(49, 110, 231, 0.03);
-        background-size: 50px;
-        color: #007bff;
-        font-size: 18px;
-        font-weight: 70px;
-        text-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    }
-    .msg1 {
-        left: -120px;
-        bottom: 45px;
-    }
-    .msg2 {
-        left: -105px;
-        bottom: 25px;
-    }
-        .vila{
+        gap: 12px;
+
         background: #007BFF;
         color: white;
-        width: ;
-        height: 100%;
+
+        border: none;
+        border-radius: 999px;
+
+        padding: 12px 20px;
+        height: 70px;
+        cursor: pointer;
+
+        font-family: 'Montserrat', sans-serif;
+        transition: .3s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.20);
     }
+
+    .btn-img:hover {
+        background: #005bb8;
+        transform: scale(1.04);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.28);
+    }
+
+    .btn-img img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: white;
+        padding: 3px;
+    }
+
+    .btn-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 16px;
+        text-align: left;
+        color: white;
+    }
+
+    .btn-text span {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .btn-text small {
+        font-size: 13px;
+        opacity: 0.9;
+    }
+
 </style>
 </head>
 <body>
+
+
 <header class="header">
     <button class="menu-btn" onclick="toggleSidebar()">☰</button>
     <h1 class="title">Suporte</h1>
-    </header>
+</header>
+
+
 <div class="container">
     <img src="./WhatsApp_Image_2025-11-04_at_20.47.17-removebg-preview.png" alt="Imagem" class="lado-esquerdo">
     <div class="texto">
@@ -122,11 +125,15 @@
         <p>Email: contato@humap.srv.br</p>
     </div>
 </div>
+
+
 <main class="main">
 <h1>Contatos de Órgãos Públicos</h1>
 
+<!-- SUA TABELA COMPLETA MANTIDA -->
 <table>
-    <tr>
+    <!-- ... (todo o conteúdo da tabela que você já tinha permanece igual) ... -->
+      <tr>
         <th>Órgão</th>
         <th>Segmento</th>
         <th>Telefone</th>
@@ -387,26 +394,31 @@
             <a href="https://cttu.recife.pe.gov.br" target="_blank">cttu.recife.pe.gov.br</a>
         </td>
     </tr>
-    <button class="floatingBtn" aria-label="Voltar">Voltar</button>
+</table>
+
+<button class="floatingBtn" aria-label="Voltar">Voltar</button>
 </main>
+
+
+
+<!-- BOTÕES NOVOS FIXOS NO CANTO -->
 <div class="hamburger">
-      <div class="btn-img">
-    <div class="vila">
-    <div class="msg msg1">Chat</div>
-    <div class="msg msg2">Interativo</div>
-      </div>
-      <img src="./feedback 1.png" alt="Imagem 1">
+    <!-- Chat Interativo -->
+    <button class="btn-img">
+        <img src="./feedback.png">
+        <div class="btn-text">
+            <span>Chat</span>
+            <small>Interativo</small>
         </div>
-
-
-    <div class="btn-img">
-        <div class="vila">
-    <div class="msg msg1">Perguntas</div>
-    <div class="msg msg2">Enquetes</div>
-    <img src="./conversations 1.png" alt="Imagem 2">
-      </div>
+    </button>
+    <!-- Perguntas Frequentes -->
+    <button class="btn-img">
+        <img src="./conversations.png" >
+        <div class="btn-text">
+            <span>Perguntas</span>
+            <small>enquetes</small>
         </div>
-    </div>
-
+    </button>
+</div>
 </body>
 </html>
