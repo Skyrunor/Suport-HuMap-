@@ -511,3 +511,306 @@ body {
   .info-categoria-carrosel-suport{ width:55%; }
   .imagem-logo-suport{ width:120px; height:120px; }
 }
+/* ========================= RESPONSIVIDADE AVANÇADA ========================= */
+
+/* --- 1. Ajustes para Tablets Grandes e Desktops Pequenos (Max-Width: 1200px) --- */
+/* Esta faixa é para otimizar a transição para telas menores que um desktop padrão. */
+@media (max-width: 1200px) {
+    .container-rodape-suport {
+        max-width: 960px; /* Reduz o limite do container do rodapé */
+    }
+    .area-pesquisa-suport input {
+        width: 30rem; /* Reduz um pouco o campo de pesquisa */
+    }
+}
+
+
+/* --- 2. Tablets Médios (Max-Width: 992px) --- */
+/* Tablets na orientação paisagem (landscape) e telas menores de laptop. */
+@media (max-width: 992px) {
+    /* Navbar */
+    .navbar-suport h1 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .area-pesquisa-suport input {
+        width: 25rem; /* Mais redução no campo de pesquisa */
+    }
+    .perfil-notificacao-suport {
+        gap: 15px; /* Diminui o espaçamento */
+    }
+    .botao-notificacao-suport {
+        margin-right: 1.5rem;
+    }
+
+    /* Carrossel e Categorias */
+    .info-categoria-carrosel-suport {
+        width: 65%; /* Dá mais espaço para o texto da categoria */
+    }
+    .info-categoria-carrosel-suport h2 {
+        font-size: 18px; /* Texto um pouco menor */
+    }
+    .icone-categoria-carrosel-suport {
+        width: 40px; /* Ícone levemente menor */
+        height: 40px;
+    }
+    
+    /* Layout da Informação (Logo + Texto) */
+    .imagem-logo-suport {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* --- 3. Tablets Pequenos/Retrato (Max-Width: 768px) --- */
+/* Tablets na orientação retrato (portrait). Ponto de interrupção comum. */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar-suport h1 {
+        display: none; /* Oculta o título principal "Suporte" para economizar espaço */
+    }
+    .area-pesquisa-suport input {
+        width: 18rem; /* Redução significativa no campo de pesquisa */
+        padding-left: 0.8rem;
+        padding-right: 2.5rem;
+    }
+    .botao-pesquisa-suport {
+        right: 0.5rem;
+    }
+    .perfil-notificacao-suport {
+        gap: 10px; 
+    }
+    .botao-notificacao-suport {
+        margin-right: 1rem; 
+        padding: 2rem; /* Reduz o padding do sino */
+    }
+
+    /* Rodapé */
+    .container-rodape-suport {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Mais colunas por linha */
+    }
+
+    /* Carrossel */
+    .item-carrosel-suport {
+        border-radius: 40px; /* Bordas um pouco menores */
+    }
+
+    /* Botão de Voltar */
+    .botao-voltar-suport {
+        width: 120px;
+        height: 60px;
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+    
+    /* FAQ e Info Layout */
+    .container-layout-suport {
+        flex-direction: column; /* Empilha logo e texto */
+        text-align: center;
+    }
+    .texto-info-suport p { 
+        font-size: 14px; 
+    }
+}
+
+
+/* --- 4. Celulares Grandes/Phablets (Max-Width: 600px) --- */
+/* Otimizado para telas de celular grandes e a transição do tablet para celular. */
+@media (max-width: 600px) {
+    /* Body */
+    body {
+        padding-bottom: 100px;
+    }
+
+    /* Navbar (Já tem uma regra para 480px, vou garantir que esta se ajuste) */
+    .navbar-suport {
+        height: 60px;
+        padding: 0 5px;
+        gap: 5px;
+    }
+    .menu-hamburguer-suport {
+        padding: 1rem;
+    }
+    
+    /* Área de pesquisa: ocupa quase toda a largura */
+    .area-pesquisa-suport input {
+        width: 90vw; /* Usa a largura total da viewport (ajustado mais abaixo) */
+        max-width: 300px;
+        font-size: 0.9rem;
+    }
+    .area-pesquisa-suport {
+        flex-grow: 1; /* Permite que a área de pesquisa cresça */
+    }
+
+    /* Perfil e Notificação */
+    .perfil-notificacao-suport {
+        position: static; /* Remove a posição absoluta para fluxo normal */
+        transform: none;
+        margin-left: auto; /* Empurra para a direita se o flex-grow acima falhar */
+        gap: 5px;
+    }
+    .botao-notificacao-suport {
+        margin-right: 0.5rem;
+        padding: 0.8rem;
+    }
+
+    /* Rodapé */
+    .container-rodape-suport {
+        grid-template-columns: 1fr; /* Uma coluna por linha */
+        text-align: center;
+    }
+    .coluna-rodape-suport h1, .coluna-rodape-suport h2 {
+        text-align: center;
+    }
+    
+    /* Carrossel */
+    .seta-esquerda-carrosel-suport, .seta-direita-carrosel-suport {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    .item-carrosel-suport {
+        padding: 12px;
+        border-radius: 30px;
+    }
+    .fundo-carrosel-suport {
+        margin-top: 50px;
+    }
+    .container-categoria-carrosel-suport {
+        padding: 0 10px;
+    }
+    
+    /* Menu Lateral */
+    .menu-lateral-suport {
+        width: 250px;
+    }
+}
+
+/* --- 5. Celulares Médios (Max-Width: 480px) --- */
+/* Refinamento da regra existente. Padrão de celular mais antigo/compacto. */
+@media (max-width: 480px) {
+    /* Navbar (Mantém as regras do 600px, mas garante o seguinte:) */
+    .area-pesquisa-suport input {
+        max-width: 200px; /* Reduz para acomodar ícones laterais */
+    }
+    .navbar-suport {
+        gap: 5px;
+    }
+    .menu-hamburguer-suport {
+        padding: 0.8rem;
+    }
+    .botao-perfil-suport img {
+        width: 30px;
+        height: 30px;
+    }
+    .botao-notificacao-suport img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Carrossel */
+    .info-categoria-carrosel-suport {
+        gap: 8px; 
+    }
+    .info-categoria-carrosel-suport h2 {
+        font-size: 16px;
+    }
+    .icone-categoria-carrosel-suport {
+        width: 35px;
+        height: 35px;
+        margin-left: 10px;
+    }
+    .seta-esquerda-carrosel-suport, .seta-direita-carrosel-suport {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    /* Botão de Voltar */
+    .botao-voltar-suport {
+        width: 100px;
+        height: 50px;
+        font-size: 16px;
+        padding: 10px 20px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+
+/* --- 6. Celulares Pequenos/Padrão (Max-Width: 375px) --- */
+/* Otimizado para modelos como iPhone SE/mini e celulares Android compactos. */
+@media (max-width: 375px) {
+    /* Navbar */
+    .area-pesquisa-suport input {
+        max-width: 150px; /* Torna o campo de pesquisa bem estreito */
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+    .botao-perfil-suport img, .botao-notificacao-suport img {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Carrossel */
+    .linha-categoria-carrosel-suport {
+        padding: 8px;
+        /* Aumenta a proporção do ícone/texto vs. o botão */
+    }
+    .info-categoria-carrosel-suport h2 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .icone-categoria-carrosel-suport {
+        width: 30px;
+        height: 30px;
+    }
+    .item-carrosel-suport {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .link-telefone-suport {
+        font-size: 14px;
+    }
+}
+
+
+/* --- 7. Celulares Extra-Pequenos (Max-Width: 320px) --- */
+/* Otimizado para as menores telas de smartphone ainda em uso (antigos/ultra-compactos). */
+@media (max-width: 320px) {
+    /* Navbar */
+    .navbar-suport {
+        gap: 2px;
+    }
+    .area-pesquisa-suport input {
+        max-width: 120px; /* Máximo possível */
+    }
+    .botao-perfil-suport img, .botao-notificacao-suport img {
+        width: 20px;
+        height: 20px;
+    }
+    .botao-notificacao-suport {
+        margin-right: 0.3rem;
+    }
+    
+    /* Carrossel */
+    .info-categoria-carrosel-suport {
+        width: 70%; 
+    }
+    .info-categoria-carrosel-suport h2 {
+        font-size: 13px;
+    }
+    .icone-categoria-carrosel-suport {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* Botão Voltar */
+    .botao-voltar-suport {
+        width: 90px;
+        height: 45px;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
