@@ -1,3 +1,4 @@
 Primeiro Adicionei a nav bar para o projeto. baseando-se na previa que foi articulada pela Primeira Scrum Master Ítala (Mãe negra de filhos atipicos).
 Assim que mantive a formula da nav bar adicionei uns "ajustes", mantendo o "Hambuger", adicionando um posicionamento adequado para a barra de pesquisa para que a mesma pudesse conter a imagen de "lupa" que seria o metodo de pesquisa,
-em seguida eu coloquei o nome da pagina "suporte" 
+Em seguida, eu nomeei a pagina como "Suporte" que deixei como "H1" e espacei ela entre a barra de pesquisa e a div em que coloquei o botão de perfil e o sininho de notificação, e estes eu deixei com margin e espaçamento entre eles para que indentificados.
+Eu segui e criei um h1 que seria o lead para os partes subsequentes "Contatos de Órgãos Públicos", assim criei a div que se expande pela tela toda para que o carrosel se encaixe na tela.
